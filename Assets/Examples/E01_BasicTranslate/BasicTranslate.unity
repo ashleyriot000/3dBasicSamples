@@ -534,30 +534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: _type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: useHold
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: canRotate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: mask.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 3346187679769785865, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
-      propertyPath: rotateSpeed
-      value: 360
-      objectReference: {fileID: 0}
     - target: {fileID: 3915509516279371162, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
       propertyPath: m_Name
       value: Mover
@@ -565,8 +541,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3915509516279371162, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1976922806}
   m_SourcePrefab: {fileID: 100100000, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
+--- !u!1 &1976922805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3915509516279371162, guid: ff4cdea9960929b479fdd8a6184ab9c0, type: 3}
+  m_PrefabInstance: {fileID: 1976922804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1976922806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976922805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5064e4f09c7234f816a24dca424bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  moveSpeed: 5
+  rotateSpeed: 720
+  canRotate: 1
+  useHold: 1
+  mask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
