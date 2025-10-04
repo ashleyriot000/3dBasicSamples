@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class Translator : MonoBehaviour
 {
   //이동처리 방식 열거형
-  private enum TranslateType
+  public enum TranslateType
   {
     Directional,
     Destination
@@ -25,7 +26,7 @@ public class Translator : MonoBehaviour
   public LayerMask mask;
 
   private bool _isPressed = false;
-  private Vector3 _direction = Vector3.zero;
+  private Vector2 _direction = Vector2.zero;
   private Vector3 _destination = Vector2.zero;
   private Quaternion _toward = Quaternion.identity;
   #endregion
