@@ -14,6 +14,7 @@ public class Launcher : MonoBehaviour
       return;
     }
 
+    //게임오브젝트 객체 동적 생성
     Projectile p = Instantiate(projectiles[_index], transform.position, Quaternion.identity);
     p.Launch(transform.forward);
   }
