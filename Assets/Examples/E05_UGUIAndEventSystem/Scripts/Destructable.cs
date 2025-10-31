@@ -28,6 +28,19 @@ public class Destructible : MonoBehaviour, IPointerDownHandler
     _currentHealth = maxHealth;
     healthUI.Activate(true, _currentHealth, (float)_currentHealth / maxHealth);
   }
+
+  public void Enabled(bool enabled)
+  {
+    if(enabled)
+    {
+      gameObject.SetActive(enabled);
+    }
+    else
+    {
+      gameObject.SetActive(enabled);
+      healthUI.Activate(enabled);
+    }
+  }
   
   public void OnPointerDown(PointerEventData eventData)
   {
@@ -36,8 +49,7 @@ public class Destructible : MonoBehaviour, IPointerDownHandler
 
     if(_currentHealth == 0)
     {
-      healthUI.Activate(false);
-      gameObject.SetActive(false);
+      Enabled(false);
     }
   }
 }
