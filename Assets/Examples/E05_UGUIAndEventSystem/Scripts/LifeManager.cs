@@ -44,5 +44,14 @@ public class LifeManager : MonoBehaviour
     EnabledGreens(enabled);
     EnabledBlues(enabled);
     EnabledPurples(enabled);
-  }  
+  }
+
+
+  private void Update()
+  {
+    if(Input.GetMouseButtonDown(0))
+    {
+      // 총쏴라
+    }
+  }
 }

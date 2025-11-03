@@ -41,13 +41,13 @@ public class Destructible : MonoBehaviour, IPointerDownHandler
       healthUI.Activate(enabled);
     }
   }
-  
+
   public void OnPointerDown(PointerEventData eventData)
   {
-    _currentHealth = Mathf.Clamp(_currentHealth - damage, 0, maxHealth);      
+    _currentHealth = Mathf.Clamp(_currentHealth - damage, 0, maxHealth);
     healthUI.ChangeValue(_currentHealth, (float)_currentHealth / maxHealth);
 
-    if(_currentHealth == 0)
+    if (_currentHealth == 0)
     {
       Enabled(false);
     }
