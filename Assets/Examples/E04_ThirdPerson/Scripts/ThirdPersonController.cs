@@ -72,6 +72,7 @@ public class ThirdPersonController : MonoBehaviour
 
   private void Start()
   {
+    DontDestroyOnLoad(this);
     Cursor.lockState = CursorLockMode.Locked;
     Cursor.visible = false;
 
@@ -127,7 +128,8 @@ public class ThirdPersonController : MonoBehaviour
   {
     Vector3 gPos = transform.position;
     gPos.y += groundedOffset;
-    _isGround = Physics.CheckSphere(gPos, groundedRadius, groundLayer, QueryTriggerInteraction.Ignore);
+    
+    _isGround = Physics.CheckSphere(gPos, groundedRadius, groundLayer);
     _anim.SetBool("IsGround", _isGround);
   }
 
@@ -151,4 +153,10 @@ public class ThirdPersonController : MonoBehaviour
     Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y + groundedOffset, transform.position.z),
     groundedRadius);
   }
+
+  private void OnCollisionEnter(Collision collision)
+  {
+    
+  }
+
 }
